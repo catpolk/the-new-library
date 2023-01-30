@@ -36,8 +36,31 @@ const resolvers = {
 
       return { token, user };
     },
-  }
-}
+    saveBook: async (parent, { newBook }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { saveBooks: newBook }},
+          { new: true }
+        );
+        return updatedUser;
+      }
+      throw new AuthentificationError('Please login!');
+    },
+      
+    removeBook: async (parent, { bookId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedBooks: { bookId }}},
+          { new: true }
+        );
+        return updatedUser;
+      }
+      throw AuthentificationError('Please login!');
+    },
+  },
+};
 
 
 module.exports = resolvers;
