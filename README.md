@@ -34,4 +34,6 @@ Provide a short description explaining the what, why, and how of your project. U
 ![alt screenshot](./client/public/images/Screen%20Shot%202023-02-03%20at%203.14.53%20PM.png)
 
 
+Github: https://github.com/catpolk/the-new-library
 
+Heroku: https://radiant-ocean-40827.herokuapp.com/
