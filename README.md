@@ -31,5 +31,7 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ![alt schreenshot](./client/public/images/Screen%20Shot%202023-02-03%20at%209.06.35%20AM.png)
 
+![alt screenshot](./client/public/images/Screen%20Shot%202023-02-03%20at%203.14.53%20PM.png)
+
 
 
